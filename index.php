@@ -11,20 +11,25 @@ label{display:inline-block;width:100px;margin-bottom:10px;}
 <body>
  
 <form method="post" action="process.php">
+<label>Id No:</label>
+<input type="text" name="id" placeholder="Enter Id" required/>
+<br />
 <label>First Name</label>
-<input type="text" name="first_name" />
+<input type="text" name="first_name" placeholder="Enter Firstname" required/>
 <br />
 <label>Last Name</label>
-<input type="text" name="last_name" />
+<input type="text" name="last_name" placeholder="Enter Lastname" required/>
 <br />
 <label>Department</label>
-<input type="text" name="department" />
+<input type="text" name="department" placeholder="Enter Department" required/>
 <br />
 <label>Email</label>
-<input type="text" name="email" />
- 
+<input type="text" name="email" placeholder="Enter Email" required/>
 <br />
-<input type="submit" value="Add Employee">
+<label>Password</label>
+<input type="password" name="pwd" placeholder="Enter Password" required/>
+<br />
+<button type="submit" value="Add Employee">Add Employee</button>
 </form>
  
  
