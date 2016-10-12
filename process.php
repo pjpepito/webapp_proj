@@ -36,4 +36,5 @@ if ($conn->query($sql) === TRUE) {
     echo "Error deleting record: " . $conn->error;
 }*/
 $conn->close();
+<a href = "reg.php" class="b"> Back</a>
 ?>

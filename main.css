@@ -1,0 +1,60 @@
+.header {
+		background-color:#3079ab;
+		height:130px;
+	   }
+
+.head {
+		COLOR:white;
+		font-family: Arial, Helvetica, sans-serif;
+		float:left;
+		position:relative;
+		left:120px;
+		top:40px;
+		font-size:40px;
+	  }
+
+#logo {
+		height:90px;
+		width:90px;
+		top:20px;
+		position:relative;
+		left:-120px;
+	 	}
+.T2    {
+		background-color:#3079ab;
+		height:50px;
+		border:2px;
+	   }
+
+a      {
+		text-decoration:none; 
+
+		}
+.b {
+	background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    width:80px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    position:relative;
+	left:280px;
+	top:-20px;
+	 }
+a:hover {
+		background-color:#3079ab;
+    	text-decoration: underline;
+    	color: black;
+    	}
+
+.message {
+color: #FF0000;
+font-weight: bold;
+text-align: center;
+width: 100%;
+}

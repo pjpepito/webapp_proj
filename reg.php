@@ -1,43 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
+<style>
+label{display:inline-block;width:100px;margin-bottom:10px;}
+</style>
+ 
+ 
+<title>Add Employee</title>
 </head>
 <body>
- <html>
-<body>
-
-<form action="login.php" method="post" style="position:center;">
-      <label><b>Employee No:</b></label> <br>
-      <input type="text" placeholder="Enter Number" name="email" required> <br>
-      <label><b>Firstname</b></label> <br>
-      <input type="text" placeholder="Enter Firstname" name="fname" required> <br>
-      <label><b>Lastname</b></label> <br>
-      <input type="text" placeholder="Enter Lastname" name="lname" required> <br>
-      <label><b>Gender</b></label> <br>
-      <input type="text" placeholder="Gender" name="gnder" required> <br>
-      <label><b>Email</b></label> <br>
-      <input type="text" placeholder="Email" name="email" required> <br>
-      <button type="submit" style="position:center;">Submit</button>
+ 
+<form method="post" action="process.php">
+<label>Id No:</label>
+<input type="text" name="id" placeholder="Enter Id" required/>
+<br />
+<label>First Name</label>
+<input type="text" name="first_name" placeholder="Enter Firstname" required/>
+<br />
+<label>Last Name</label>
+<input type="text" name="last_name" placeholder="Enter Lastname" required/>
+<br />
+<label>Department</label>
+<input type="text" name="department" placeholder="Enter Department" required/>
+<br />
+<label>Email</label>
+<input type="text" name="email" placeholder="Enter Email" required/>
+<br />
+<label>Password</label>
+<input type="password" name="pwd" placeholder="Enter Password" required/>
+<br />
+<button type="submit" value="Add Employee">Add Employee</button>
 </form>
-<?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
-echo "Connected successfully";
-?>
-
-</body>
-</html> 
-	
+ 
+ 
+ 
 </body>
 </html>
