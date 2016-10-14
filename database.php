@@ -1,7 +1,7 @@
 <?php
-$connect=mysqli_connect('localhost','root','','roseph');
+$connect=mysql_connect('localhost','root','','roseph');
  
-if(mysqli_connect_errno($connect))
+if(mysql_connect_errno($connect))
 {
 		echo 'Failed to connect';
 }

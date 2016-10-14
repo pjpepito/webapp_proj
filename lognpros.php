@@ -1,21 +1,19 @@
- <?php include 'database.php'; ?>
 <?php
-session_start();
-if(isset($_POST['submit']))
-{
- mysql_connect('localhost','root','') or die(mysql_error());
- mysql_select_db('new') or die(mysql_error());
- $email=$_POST['email'];
- $pwd=$_POST['pwd'];
- if($email!=''&&$pwd!='')
- {
-   /*$query=mysql_query("select * from employee where email='".$email."' and psswrd='".$pwd."'") or die(mysql_error());*/
-   $result = mysql_query("SELECT * FROM employee WHERE emil='" . $_POST["email"] . "' and psswrd = '". $_POST["pwd"]."'");
-   $count  = mysql_num_rows($result);
+$errMSG="";
+if(count($_POST)>0) {
+$connect = mysql_connect("localhost","root","");
+mysql_select_db("roseph",$connect);
+$result = mysql_query("SELECT * FROM employee WHERE email='" . $_POST["email"] . "' and psswrd = '". $_POST["psw"]."'");
+$count  = mysql_num_rows($result);
 if($count==0) {
-$message = "Invalid Username or Password!";
+$errMSG = "Invalid Username or Password!";
+header("Location: login.php");
+
+echo $errMSG; 
 } else {
-$message = "You are successfully authenticated!";
+$errMSG = "You are successfully authenticated!";
+header("Location: main.php");
+echo $errMSG; 
 }
-  }
+}
 ?>

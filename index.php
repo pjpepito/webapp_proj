@@ -27,7 +27,7 @@ label{display:inline-block;width:100px;margin-bottom:10px;}
 <input type="text" name="email" placeholder="Enter Email" required/>
 <br />
 <label>Password</label>
-<input type="password" name="pwd" placeholder="Enter Password" required/>
+<input type="password" name="psw" placeholder="Enter Password" required/>
 <br />
 <button type="submit" value="Add Employee">Add Employee</button>
 </form>

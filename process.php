@@ -1,4 +1,3 @@
-<?php include 'database.php'; ?>
 <?php
 $servername = "localhost";
 $username = "root";
@@ -11,7 +10,7 @@ $first_name=$_POST['first_name'];
 $last_name=$_POST['last_name'];
 $department=$_POST['department'];
 $email=$_POST['email'];
-$pwd=$_POST['pwd'];
+$psw=$_POST['psw'];
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -21,14 +20,18 @@ if ($conn->connect_error) {
 } 
 
 $sql = "INSERT INTO employee (u_no,fname,lname,dpt,email,psswrd)
-		        VALUES ('$id','$first_name','$last_name','$department','$email','$pwd')";
+		        VALUES ('$id','$first_name','$last_name','$department','$email','$psw')";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
+    header("Location: login.php");
+
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
+    header("Location: reg.php");
+
 }
-/*$sql = "DELETE FROM employee WHERE fname='jerome'";
+/*$sql = "DELETE FROM employee WHERE fname=''";
 
 if ($conn->query($sql) === TRUE) {
     echo "Record deleted successfully";
@@ -36,5 +39,4 @@ if ($conn->query($sql) === TRUE) {
     echo "Error deleting record: " . $conn->error;
 }*/
 $conn->close();
-<a href = "reg.php" class="b"> Back</a>
 ?>

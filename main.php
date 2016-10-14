@@ -14,14 +14,14 @@
 		<a href = "home.html" class="b"> LOGIN</a>
 		<a href = "about.html" class="b"> ABOUT US </a>
 	</div>
-	<!-- 	<div class="t2">
+	<div class="t2">
 		  <img class="mySlides" src="pic1.jpg" width="750px" height="350px">
 		  <img class="mySlides" src="pic2.jpg" width="750px" height="350px">
 		  <img class="mySlides" src="pic3.jpg" width="750px" height="350px">
 		  <img class="mySlides" src="pic4.jpg" width="750px" height="350px">
 		  <img class="mySlides" src="pic5.jpg" width="750px" height="350px">
-	</div> -->
-		<!-- <script>
+	</div>
+		<script>
 		var myIndex = 0;
 		carousel();
 
@@ -36,7 +36,7 @@
 		    x[myIndex-1].style.display = "block";  
 		    setTimeout(carousel, 2000); // Change image every 2 seconds
 		}
-		</script> -->
+		</script>
 	<script>
 var slideIndex = 1;
 showDivs(slideIndex);
@@ -65,20 +65,6 @@ function showDivs(n) {
   dots[slideIndex-1].className += " w3-white";
 }
 </script>
-
-	<div class="t1">
-			<!-- <form class="f1" action="action_page.php">
-				First name:<br>
-				<input type="text" name="firstname" value="">
-				<br>
-				Last name:<br>
-				<input type="text" name="lastname" value="">
-				<br><br>
-				<a href = "home.html"> <input type="button" value="LOGIN" id="fb"> </a>
-			</form> -->
-	</dv>
-
-
 </body>
 
 </html> 

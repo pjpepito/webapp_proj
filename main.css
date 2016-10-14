@@ -52,6 +52,15 @@ a:hover {
     	color: black;
     	}
 
+.tableheader {
+background-color: #95BEE6;
+color:white;
+font-weight:bold;
+}
+.tablerow {
+background-color: #A7D6F1;
+color:white;
+}
 .message {
 color: #FF0000;
 font-weight: bold;
