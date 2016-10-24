@@ -3,7 +3,6 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "roseph";
-
 // create a variable
 $id=$_POST['id'];
 $first_name=$_POST['first_name'];

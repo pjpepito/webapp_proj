@@ -1,12 +1,6 @@
-
 <!DOCTYPE html>
-<head>
-<title>HOME</title>
-<link href="main.css" rel="stylesheet">
-</head>
 <html>
 <style>
-
 /* Full-width input fields */
 input[type=text], input[type=password] {
     width: 100%;
@@ -43,8 +37,8 @@ button {
 }
 
 img.avatar {
-    width: 20%;
-    border-radius: 40%;
+    width: 40%;
+    border-radius: 50%;
 }
 
 .container {
@@ -76,7 +70,7 @@ span.psw {
     background-color: #fefefe;
     margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
     border: 1px solid #888;
-    width: 25%; /* Could be more or less, depending on screen size */
+    width: 40%; /* Could be more or less, depending on screen size */
     animation-name: animatetop;
     animation-duration: 0.4s
 }
@@ -123,57 +117,42 @@ span.psw {
        width: 100%;
     }
 }
-.logbtn {
-    width: 177px;
-    position: relative;
-    padding: 10px 18px;
-    background-color: #f44336;
-}
 </style>
 <body>
-<div id="id02" class="modal">
+
+<h2>Modal Login Form</h2>
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+
+<div id="id01" class="modal">
+  
   <form class="modal-content animate" action="" method="POST">
     <div class="imgcontainer">
-      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="ab.png" alt="LOGIN" class="avatar">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="img_avatar2.png" alt="Avatar" class="avatar">
     </div>
+
+    <div class="container">
+      <label><b>Username</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <input type="checkbox" checked="checked"> Remember me
+    </div>
+
     <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
       <span class="psw">Forgot <a href="#">password?</a></span>
     </div>
-     </div>
-    </form>
-<form class="modal-content animate" action="" method="POST">
-<div class="container">
-<label>Email</label>
-<input type="text" name="email" placeholder="Enter Email" required/>
-<br />
-<label>Password</label>
-<input type="password" name="psw" placeholder="Enter Password" required/>
-<br />
-<button type="submit" value="Add Employee" class="logbtn">LOGIN</button>
+  </form>
 </div>
-<?php
-$errMSG="";
-if(count($_POST)>0) {
-$connect = mysql_connect("localhost","root","");
-mysql_select_db("roseph",$connect);
-$result = mysql_query("SELECT * FROM employee WHERE email='" . $_POST["email"] . "' and psswrd = '". $_POST["psw"]."'");
-$count  = mysql_num_rows($result);
-if($count==0) {
-$errMSG = "Invalid Username or Password!";
-echo $errMSG; 
-} else {
-$errMSG = "You are successfully authenticated!";
-header("Location: index.php");
-echo $errMSG; 
-}
-}
-?>
-</form>
+
 <script>
 // Get the modal
-var modal = document.getElementById('id02');
+var modal = document.getElementById('id01');
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
@@ -182,5 +161,24 @@ window.onclick = function(event) {
     }
 }
 </script>
+
 </body>
 </html>
+<?php
+$errMSG="";
+if(count($_POST)>0) {
+$connect = mysql_connect("localhost","root","");
+//$conn = sqlsrv_connect($servername, $username, $password, $dbname);
+mysql_select_db("roseph",$connect);
+$result = mysql_query("SELECT * FROM employee WHERE email='" . $_POST["email"] . "' and psswrd = '". $_POST["psw"]."'");
+$count  = mysql_num_rows($result);
+if($count==0) {
+$errMSG = "Invalid Username or Password!";
+echo $errMSG; 
+} else {
+$errMSG = "You are successfully authenticated!";
+header("Location: main.php");
+echo $errMSG; 
+}
+}
+?>

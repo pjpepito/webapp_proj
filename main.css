@@ -1,25 +1,38 @@
 .header {
-		background-color:#3079ab;
-		height:130px;
+		background-color:#646463;
+		height:67px;
 	   }
 
 .head {
-		COLOR:white;
+		color:white;
 		font-family: Arial, Helvetica, sans-serif;
 		float:left;
 		position:relative;
-		left:120px;
-		top:40px;
-		font-size:40px;
-	  }
-
-#logo {
-		height:90px;
-		width:90px;
+		left:30px;
 		top:20px;
+		font-size:30px;
+	  }
+.errmsg{
+	position:relative;
+	width:120px;
+	height:2px;
+	left:790px;
+	top:-105px;
+	color:red;
+}
+.reg{
+	position:relative;
+	left: 60px;
+	color:black;
+}
+#logo {
+		height:60px;
+		width:60px;
+		top:5px;
 		position:relative;
-		left:-120px;
+		left:-420px;
 	 	}
+
 .T2    {
 		background-color:#3079ab;
 		height:50px;
@@ -30,12 +43,12 @@ a      {
 		text-decoration:none; 
 
 		}
-.b {
-	background-color: #4CAF50; /* Green */
+.btn {
+	background-color:#646463;
     border: none;
     color: white;
     padding: 10px 25px;
-    width:80px;
+    width:100px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -43,13 +56,56 @@ a      {
     margin: 4px 2px;
     cursor: pointer;
     position:relative;
-	left:280px;
-	top:-20px;
+	left:255px;	
+	top:-55px;
+	}
+.btn2 {
+	background-color: #646463 ;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    width:125px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    position:relative;
+	right:-30px;	
+	top:-30px;
 	 }
-a:hover {
-		background-color:#3079ab;
-    	text-decoration: underline;
-    	color: black;
+
+.btn3 {
+	background-color: #646463 ;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    width:125px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    position:relative;
+	left:20px;	
+	top:2px;
+	 }
+.btn:hover {
+		background-color: #f5a70b;
+    	text-decoration:;
+    	color:white;
+    	}
+.btn2:hover {
+		background-color:#f5a70b;
+    	text-decoration:;
+    	color:white;
+    	}
+.btn3:hover {
+		background-color:#f5a70b;
+    	text-decoration:;
+    	color:white;
     	}
 
 .tableheader {
@@ -66,4 +122,84 @@ color: #FF0000;
 font-weight: bold;
 text-align: center;
 width: 100%;
+}
+.dropbtn {
+	background-color:#3079ab;
+	font-size: 16px;
+    margin: 4px 2px;
+    color: white;
+    padding: 10px 25px;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    width:100px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    position:relative;
+	left:1190px;	
+	top:-70px;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color:#f5a70b}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color:#4CAF50;
+}
+.f1 {
+    background-color: #fefefe;
+    border: 1px solid #888;
+    width: 100px;
+    left:-100px;
+    top:100px;
+}
+.f2 {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    width: 25%;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    left:0px;
+    top:0px;
+}
+.f3 {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    width: 25%;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    left:30px;
+    top:0px;
 }
